@@ -13,8 +13,8 @@
 
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!--    Để có thể dùng được Dependency invention hay là sử dụng @autowired-->
     <!-- Activates scanning of @Repository and @Service and @Component -->
-
     <context:component-scan base-package="com.learn" />
 
 </beans>

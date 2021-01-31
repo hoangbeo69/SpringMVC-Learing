@@ -22,6 +22,9 @@ public class MenuHandeInterceptor implements HandlerInterceptor {
      */
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
+        //Thực hiện kiểm tra các điều kiện hoặc có thể chạy trước để thiết lập thêm các biến kháo vào dũ liệu
+        //Trong hiện tại thì chỉ thực hiện add thêm model menu vào request trước khi controller xử lý request để lấy dữ liệu trước khi
+        //xử lý các bước tiếp theo trong controller
         httpServletRequest.setAttribute("menu", homeService.loadMenu());
         return true;
     }

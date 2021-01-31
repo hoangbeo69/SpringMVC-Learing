@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <decorators defaultdir = "/decorators">
     <decorator name="admin" page="admin.jsp">
-        <pattern>/admin</pattern>
+        <pattern>/admin*</pattern>
     </decorator>
+
     <decorator name="web" page="web.jsp">
-        <pattern>/web</pattern>
+        <pattern>/*</pattern>
     </decorator>
 </decorators>
