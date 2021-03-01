@@ -1,7 +1,8 @@
 package com.learn.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -19,6 +20,12 @@ public class UserEntity extends BaseEntity{
     @Column(name = "status")
     private Integer status;
 
+    //Thiết lập quan hệ n-n với bảng Role id
+    @ManyToMany
+    @JoinTable(name = "user_role",
+            joinColumns = @JoinColumn(name = "userid"),
+            inverseJoinColumns = @JoinColumn(name = "roleid"))
+    private List<RoleEntity> roles = new ArrayList<>();
 
     public String getUsername() {
         return username;
@@ -52,4 +59,11 @@ public class UserEntity extends BaseEntity{
         this.status = status;
     }
 
+    public List<RoleEntity> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<RoleEntity> roles) {
+        this.roles = roles;
+    }
 }

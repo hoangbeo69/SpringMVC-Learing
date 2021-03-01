@@ -1,7 +1,8 @@
 package com.learn.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "role")
@@ -12,7 +13,8 @@ public class RoleEntity extends BaseEntity{
 
     @Column(name = "code")
     private String code;
-
+    @ManyToMany(mappedBy = "roles")
+    private List<UserEntity> users = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -30,4 +32,11 @@ public class RoleEntity extends BaseEntity{
         this.code = code;
     }
 
+    public List<UserEntity> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<UserEntity> users) {
+        this.users = users;
+    }
 }
