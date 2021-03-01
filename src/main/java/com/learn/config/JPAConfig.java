@@ -65,7 +65,8 @@ public class JPAConfig {
         Properties properties = new Properties();
         //Tạo data từ những entity của java class ở đây có nghĩa là lúc
         //ban đầu cần khởi tạo luôn table
-        properties.setProperty("hibernate.hbm2ddl.auto","create-drop");
+        properties.setProperty("hibernate.hbm2ddl.auto","create");
+//        properties.setProperty("hibernate.hbm2ddl.auto","create-drop");
         //Thực hiện thêm sửa 1 ít thuộc tính không phải tạo mới cả 1 table
         //properties.setProperty("hibernate.hbm2ddl.auto","none");
         return properties;

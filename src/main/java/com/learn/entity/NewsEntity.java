@@ -1,14 +1,11 @@
 package com.learn.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "news")  //mapping với bảng nào ở trong database
-public class NewsEntity {
-    //Thiết lập thuộc tính tự tăng cho ID
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class NewsEntity extends BaseEntity{
 
     @Column(name = "title") //khi thực hiện khởi tạo column đó trong mysql thì nó tên như thế nào
     private String title;
@@ -21,14 +18,6 @@ public class NewsEntity {
 
     @Column(name = "content",columnDefinition = "TEXT")
     private String content;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;

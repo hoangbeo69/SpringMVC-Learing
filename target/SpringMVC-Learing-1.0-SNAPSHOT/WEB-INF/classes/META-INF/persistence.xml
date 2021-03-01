@@ -3,6 +3,8 @@
 <!--    Config này kết nối với file JPAConfig.data-->
     <persistence-unit name="persistence-data">
         <class>com.learn.entity.NewsEntity</class>
+        <class>com.learn.entity.RoleEntity</class>
+        <class>com.learn.entity.UserEntity</class>
     </persistence-unit>
 </persistence>
 <!--Khởi tạo Entity Manager FactoryBean-->
