@@ -14,6 +14,7 @@
         <mysql.version>8.0.21</mysql.version>
         <servlet.api.version>3.1.0</servlet.api.version>
         <springframework.version>4.3.13.RELEASE</springframework.version>
+        <springsercurity.version>3.2.8.RELEASE</springsercurity.version>
         <jsp.api.version>2.3.1</jsp.api.version>
         <jstl.version>1.2</jstl.version>
         <hibernate.version>4.3.6.Final</hibernate.version>
@@ -57,6 +58,31 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
             <version>${springframework.version}</version>
+        </dependency>
+<!--        Spring security-->
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${springsercurity.version}</version>
+        </dependency>
+
+       <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${springsercurity.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-acl</artifactId>
+            <version>${springsercurity.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${springsercurity.version}</version>
         </dependency>
 
         <!-- servlet api -->

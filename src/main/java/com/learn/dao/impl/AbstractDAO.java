@@ -2,7 +2,6 @@ package com.learn.dao.impl;
 
 import com.learn.dao.GenericDAO;
 import com.learn.mapper.RowMapper;
-import org.springframework.stereotype.Service;
 
 import java.sql.*;
 import java.util.ArrayList;
