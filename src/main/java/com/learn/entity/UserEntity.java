@@ -9,7 +9,7 @@ import java.util.List;
 public class UserEntity extends BaseEntity{
 
     @Column(name = "username")
-    private String username;
+    private String userName;
 
     @Column(name = "password")
     private String password;
@@ -21,18 +21,18 @@ public class UserEntity extends BaseEntity{
     private Integer status;
 
     //Thiết lập quan hệ n-n với bảng Role id
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "user_role",
             joinColumns = @JoinColumn(name = "userid"),
             inverseJoinColumns = @JoinColumn(name = "roleid"))
     private List<RoleEntity> roles = new ArrayList<>();
 
     public String getUsername() {
-        return username;
+        return userName;
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.userName = username;
     }
 
     public String getPassword() {

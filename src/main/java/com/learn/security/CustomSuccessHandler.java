@@ -1,6 +1,5 @@
 package com.learn.security;
 
-import com.learn.constant.SystemConstant;
 import com.learn.util.SecurityUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.DefaultRedirectStrategy;
@@ -35,7 +34,7 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         List<String> roles = SecurityUtils.getAuthorities();
         if(isAdmin(roles)){
             url = "/admin";
-        }else if(isAdmin(roles)){
+        }else if(isUser(roles)){
             url = "/trang-chu";
         }
         return url;

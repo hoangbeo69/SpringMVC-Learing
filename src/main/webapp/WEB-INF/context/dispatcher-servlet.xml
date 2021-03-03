@@ -34,4 +34,5 @@
     </bean>
 <!--    định nghĩa tên folder để jstl dùng gọi-->
     <mvc:resources mapping="/template/**" location="/template/"/>
+    <mvc:resources mapping="/images/**" location="/images/"/>
 </beans>

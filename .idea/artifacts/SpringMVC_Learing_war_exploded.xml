@@ -26,6 +26,8 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.13.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.13.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.13.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:4.3.13.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.9" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:3.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:3.2.8.RELEASE" />

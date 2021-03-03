@@ -69,6 +69,7 @@ public class JPAConfig {
 //        properties.setProperty("hibernate.hbm2ddl.auto","create-drop");
         //Thực hiện thêm sửa 1 ít thuộc tính không phải tạo mới cả 1 table
         properties.setProperty("hibernate.hbm2ddl.auto","none");
+        properties.setProperty("hibernate.enable_lazy_load_no_trans", "true");
         return properties;
     }
 }
