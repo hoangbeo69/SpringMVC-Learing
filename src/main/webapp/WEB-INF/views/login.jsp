@@ -25,9 +25,10 @@
             <input type="text" required="" id="password" class="fadeIn third" name="j_password" placeholder="Password">
             <input type="hidden" id="action" name="action" value="login">
             <input type="submit" class="fadeIn fourth" value="Log In">
-            <c:if test="${not empty message}">
-                <div class="alert alert-${alert} w90">
-                    <strong>Fail!</strong> ${message}
+            <c:if test="${param.incorrectAccount != null}">
+                <div class="alert alert-danger w90">
+                    <strong>Fail!</strong>
+                    Username or Password Incorrect
                 </div>
             </c:if>
         </form>

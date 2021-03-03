@@ -21,6 +21,7 @@
         <spring.data>1.11.5.RELEASE</spring.data>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <slf4j.version>1.7.25</slf4j.version>
     </properties>
     <dependencies>
         <!--        Spring Dependency-->
@@ -142,6 +143,17 @@
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
             <version>${spring.data}</version>
+        </dependency>
+<!--        SLF4J Simple logging facade for Java-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
 
     </dependencies>

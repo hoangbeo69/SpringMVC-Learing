@@ -16,6 +16,7 @@
                      authentication-success-handler-ref="customSuccessHandler"
                      authentication-failure-url="/dang-nhap?incorrectAccount"/>
         <session-management invalid-session-url="/dang-nhap?sessionTimeout"/>
+        <logout delete-cookies="JSESSIONID"/>
     </http>
 
 <!--    Xử lý ngầm chỗ thực hiện xác thực password cùng với MD5-->
@@ -27,5 +28,5 @@
 
     <beans:bean id="customUserDetailsService" class="com.learn.service.impl.CustomUserDetailsService" />
     <beans:bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
-
+    <beans:bean id="customSuccessHandler" class="com.learn.security.CustomSuccessHandler" />
 </beans:beans>
