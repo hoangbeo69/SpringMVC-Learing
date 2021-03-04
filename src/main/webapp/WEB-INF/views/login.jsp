@@ -31,6 +31,12 @@
                     Username or Password Incorrect
                 </div>
             </c:if>
+            <c:if test="${param.accessDenied != null}">
+                <div class="alert alert-danger w90">
+                    <strong>Fail!</strong>
+                    You Don't Currently Have Permission to Access
+                </div>
+            </c:if>
         </form>
         <!-- Remind Passowrd -->
         <div id="formFooter">

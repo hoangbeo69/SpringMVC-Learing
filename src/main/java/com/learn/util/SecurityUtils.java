@@ -1,5 +1,6 @@
 package com.learn.util;
 
+import com.learn.dto.MyUser;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 
@@ -7,7 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SecurityUtils {
-
+    public static MyUser getPrincipal(){
+        MyUser myUser= (MyUser) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+        return myUser;
+    }
+    /**
+     * Thực hiện kiểm tra các quyền có trong myuser
+     * và trả về list quyền có trong myuser
+     * @return
+     */
     public static List<String> getAuthorities(){
         List<String> results = new ArrayList<>();
         List<GrantedAuthority> authorities = (List<GrantedAuthority>)(SecurityContextHolder.getContext().getAuthentication().getAuthorities());

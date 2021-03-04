@@ -5,6 +5,7 @@
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/news/edit.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/news" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/springmvc.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/common/web/header.jsp" value="file://$PROJECT_DIR$/src/main/webapp/common/web" />
       </map>
     </option>
   </component>
